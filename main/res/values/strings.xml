@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Quiz</string>
+    <string name="button_true">Prawda</string>
+    <string name="button_false">Falsz</string>
+    <string name="button_next">Nastepne</string>
+    <string name="question_1">W Polsce nie znajduje się reaktor atomowy</string>
+    <string name="question_2">Katastrofa w Czarnobylu wydarzyła się w 1986 roku</string>
+    <string name="question_3">Elektrownia jądrowa jest bezpieczna dla środowiska</string>
+    <string name="question_4">Nie każdy uran nadaje się do reaktora</string>
+    <string name="question_5">Energetyka atomowa ma już kilkadziesiąt lat</string>
+    <string name="correct_answer">Prawidłowa odpowiedź</string>
+    <string name="incorrect_answer">Zła odpowiedź</string>
+</resources>
