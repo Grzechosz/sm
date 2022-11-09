@@ -107,6 +107,10 @@ public class TaskListFragment extends Fragment {
             iconImageView = itemView.findViewById(R.id.iconImageView);
 
         }
+        
+         public TextView getNameTextView() {
+            return nameTextView;
+        }
 
         public CheckBox getCheckBox() {
             return checkBox;
@@ -156,7 +160,13 @@ public class TaskListFragment extends Fragment {
             Task task = tasks.get(position);
             CheckBox checkBox = holder.getCheckBox();
             checkBox.setChecked(tasks.get(position).isDone());
-            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> tasks.get(holder.getBindingAdapterPosition()).setDone(isChecked));
+            checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> { tasks.get(holder.getBindingAdapterPosition()).setDone(isChecked);
+                if (task.isDone()) {
+                    nameTextView.setPaintFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+                } else {
+                    nameTextView.setPaintFlags(~Paint.STRIKE_THRU_TEXT_FLAG);
+                }
+            });
 
             holder.bind(task);
         }
